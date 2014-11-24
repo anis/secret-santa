@@ -1,0 +1,25 @@
+<link rel="stylesheet" media="screen" type="text/css" href="./css/style.css" />
+
+<div class="Form">
+    <form method="post" action="#">
+        {{ form_row(form.attendees) }}
+
+        <input type="submit" name="submit" value="Envoyer" />
+        <button id="addAttendee">Ajouter un participant</button>
+    </form>
+</div>
+
+<script type="text/javascript">
+var attendeesList = document.getElementById("form_attendees"),
+    workspace = document.createElement("div");
+
+var uid = 0;
+document.getElementById("addAttendee").addEventListener("click", function(e) {
+    e.preventDefault();
+    workspace.innerHTML = attendeesList.getAttribute("data-prototype")
+        .replace(/__name__label__/g, "")
+        .replace(/__name__/g, uid);
+    uid++;
+    attendeesList.appendChild(workspace.firstChild);
+});
+</script>

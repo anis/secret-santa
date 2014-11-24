@@ -1,0 +1,26 @@
+{
+    "name": "anis/secret-santa",
+    "description": "An application for organizing Secret Santa events.",
+    "require": {
+        "silex/silex": "~2.0@dev",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "symfony/form": "~2.3",
+        "symfony/twig-bridge": "~3.0@dev",
+        "symfony/translation": "~2.3",
+        "symfony/locale": "~2.3",
+        "swiftmailer/swiftmailer": "~5.3@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anis Safine",
+            "email": "anis@safine.me"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Anis\\SecretSanta\\": "src/"
+        }
+    }
+}
